@@ -19,6 +19,10 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 5000;
 
+app.get("/", (req, res) => {
+  res.send("✅ Job Portal Backend is running successfully on Render!");
+}
+);
 mongoose.connect(process.env.MONGODB_URI)
   .then(() => {
     console.log("MongoDB connected");
