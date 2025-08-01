@@ -1,0 +1,177 @@
+/* EmployerDashboard.css */
+
+/* Root variables to match LoginForm.css, Home.css, Navbar.css, Dashboard.css, Jobs.css, SavedJobs.css, Applications.css, and Notifications.css */
+:root {
+  --primary-color: #007bff;
+  --primary-dark: #0056b3;
+  --text-color: #333;
+  --border-radius: 12px;
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Main container */
+.employer-dashboard-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f2f5 0%, #d1e0ff 100%); /* Matches previous components */
+  padding: 40px 20px;
+  font-family: 'Inter', sans-serif; /* Matches previous components */
+}
+
+/* Dashboard title */
+.employer-dashboard-title {
+  color: var(--text-color);
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Actions container */
+.employer-dashboard-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Space between buttons */
+  margin-bottom: 2rem;
+}
+
+/* Jobs section title */
+.employer-jobs-title {
+  color: var(--text-color);
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* No jobs message */
+.no-jobs {
+  color: #555;
+  font-size: 1.25rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Job card */
+.employer-job-card {
+  background: #ffffff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 20px; /* Matches job-card, saved-job-card, and application-card */
+  margin: 0 auto 1.5rem;
+  max-width: 800px; /* Matches job-card, saved-job-card, and application-card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.employer-job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Job title */
+.employer-job-title {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Job info */
+.employer-job-info {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+/* Actions container */
+.employer-job-actions {
+  display: flex;
+  justify-content: flex-start; /* Align buttons to the left */
+  margin-top: 1rem;
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(90deg, var(--primary-color), #00aaff); /* Matches previous components */
+  border: none;
+  border-radius: var(--border-radius);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, var(--primary-dark), #007bff);
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .employer-dashboard-container {
+    padding: 20px 15px;
+  }
+
+  .employer-dashboard-title {
+    font-size: 2rem;
+  }
+
+  .employer-jobs-title {
+    font-size: 1.5rem;
+  }
+
+  .employer-job-card {
+    padding: 15px;
+    max-width: 100%; /* Full width on smaller screens */
+  }
+
+  .employer-job-title {
+    font-size: 1.25rem;
+  }
+
+  .employer-job-info {
+    font-size: 0.9rem;
+  }
+
+  .employer-dashboard-actions {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px;
+  }
+
+  .btn-primary {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .employer-dashboard-title {
+    font-size: 1.75rem;
+  }
+
+  .employer-jobs-title {
+    font-size: 1.25rem;
+  }
+
+  .employer-job-card {
+    padding: 12px;
+  }
+
+  .employer-job-title {
+    font-size: 1.1rem;
+  }
+
+  .employer-job-info {
+    font-size: 0.85rem;
+  }
+
+  .btn-primary {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+}

@@ -1,0 +1,93 @@
+/* Notifications.css */
+
+/* Root variables to match LoginForm.css, Home.css, Navbar.css, Dashboard.css, Jobs.css, SavedJobs.css, and Applications.css */
+:root {
+  --primary-color: #007bff;
+  --primary-dark: #0056b3;
+  --text-color: #333;
+  --border-radius: 12px;
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Main container */
+.notifications-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f2f5 0%, #d1e0ff 100%); /* Matches previous components */
+  padding: 40px 20px;
+  font-family: 'Inter', sans-serif; /* Matches previous components */
+}
+
+/* Title */
+.notifications-title {
+  color: var(--text-color);
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* No notifications message */
+.no-notifications {
+  color: #555;
+  font-size: 1.25rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Notification card */
+.notification-card {
+  background: #ffffff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 20px; /* Matches job-card, saved-job-card, and application-card */
+  margin: 0 auto 1.5rem;
+  max-width: 800px; /* Matches job-card, saved-job-card, and application-card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.notification-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Notification message */
+.notification-message {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .notifications-container {
+    padding: 20px 15px;
+  }
+
+  .notifications-title {
+    font-size: 2rem;
+  }
+
+  .notification-card {
+    padding: 15px;
+    max-width: 100%; /* Full width on smaller screens */
+  }
+
+  .notification-message {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .notifications-title {
+    font-size: 1.75rem;
+  }
+
+  .notification-card {
+    padding: 12px;
+  }
+
+  .notification-message {
+    font-size: 0.85rem;
+  }
+}

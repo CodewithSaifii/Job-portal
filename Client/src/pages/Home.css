@@ -1,0 +1,101 @@
+/* Home.css */
+
+/* Root variables to match LoginForm.css for consistency */
+:root {
+  --primary-color: #007bff;
+  --primary-dark: #0056b3;
+  --background-color: #e9ecef;
+  --text-color: #333;
+  --shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  --border-radius: 12px;
+}
+
+/* Main container for the home page */
+.home-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f2f5 0%, #d1e0ff 100%); /* Matches LoginForm gradient */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Inter', sans-serif; /* Matches LoginForm typography */
+  text-align: center;
+}
+
+/* Heading styling */
+.home-container h1 {
+  color: var(--text-color);
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Paragraph styling */
+.home-container p {
+  color: #555;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  line-height: 1.6;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Browse Jobs link (styled as a button) */
+.home-container a {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--primary-color), #00aaff); /* Matches LoginForm button gradient */
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-container a:hover {
+  background: linear-gradient(90deg, var(--primary-dark), #007bff);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.home-container a:active {
+  transform: translateY(0);
+}
+
+/* Fade-in animation for smooth entrance */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 576px) {
+  .home-container {
+    padding: 15px;
+  }
+
+  .home-container h1 {
+    font-size: 1.75rem;
+  }
+
+  .home-container p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .home-container a {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
